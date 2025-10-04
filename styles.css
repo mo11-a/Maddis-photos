@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(221, 221, 241);
+}
+
+header{
+    text-align: center;
+    font-family: fantasy;
+    color: black;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black; /* Sets the text color to black */
+  /* Optional: You can also remove the default underline */
+  text-decoration: none; 
+}
+img.rocky {
+  width: 300px;
+  height: 250px;
+  padding: 5%
+}
+img.pumpkin {
+  width: 300px;
+  height: 250px;
+  padding: 5%;
+}
+img.sleepy {
+  width: 300px;
+  height: 250px;
+  padding: 5%;
+}
+img.stairs {
+  width: 300px;
+  height: 250px;
+  padding: 5%;
+}
+img.bath {
+  width: 300px;
+  height: 275px;
+  padding: 5%;
+}
+img.pumpkin2 {
+  width: 250px;
+  height: 250px;
+  padding: 5%;
+}
+img.goose {
+  width: 300px;
+  height: 250px;
+  padding: 5%;
+}
+.center-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically (if the container has a defined height) */
+  /* Optional: Set a height for vertical centering to be visible */
+  height: 300px; 
+}
