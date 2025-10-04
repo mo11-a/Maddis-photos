@@ -1,11 +1,19 @@
 body{
-    background-color: rgb(221, 221, 241);
 }
-
 header{
-    text-align: center;
-    font-family: fantasy;
+    font-family:cursive;
+    font-size: x-large;
     color: black;
+    background-color:whitesmoke;
+    
+    }
+
+#home-page{
+  background-image: url('img/_1010708.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 a:link,
 a:visited,
@@ -30,9 +38,9 @@ img.red {
   height: 512px;
   padding: 5%;
 }
-img.stairs {
-  width: 300px;
-  height: 250px;
+img.grad {
+  width: 384px;
+  height: 512px;
   padding: 5%;
 }
 img.bath {
@@ -50,10 +58,41 @@ img.goose {
   height: 250px;
   padding: 5%;
 }
-.center-container {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;    /* Centers vertically (if the container has a defined height) */
-  /* Optional: Set a height for vertical centering to be visible */
-  height: 300px; 
+
+.topnav a {
+  float: right;
+  text-decoration: none;
+  font-size: 22px;
+  
+  
 }
+header {
+  position: relative;
+  text-align: center;   /* centers the h1 horizontally */
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav {
+  position: absolute;
+  top: 10px;   /* adjust for spacing */
+  right: 20px;
+}
+
+.topnav a {
+    margin-left: 15px;
+
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
