@@ -11,11 +11,11 @@ header{
     }
 
 #home-page{
-  background-image: url(img/_1012342.jpeg);
+  background-image: url(img/_1012501.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment:scroll;
 }
 a:link,
 a:visited,
@@ -31,21 +31,21 @@ a:active {
   font-size: 22px;}
   
 .champagne4{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 
 
 .gradsix{
-  width: 348px;
-  height:512px;
-  padding: 40px;
+  width: 500px;
+  height:800px;
+  padding: 20px;
 }
 
 .whitefour{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 
@@ -66,53 +66,63 @@ a:active {
   padding: 40px;
 }
   .champagne6{
-    width: 348px;
-    height: 512px;
+    width: 300px;
+    height: 350px;
     padding: 40px;
   }
   .HannahMitchel{
-    width: 586px;
-    height: 910px;
-    padding: 40px;
+    width: 500px;
+    height: 800px;
+    padding: 20px;
 }
 .HannahMitchelBeach{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 .gradfour{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 } 
 .hats{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 } 
 .horse{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 .Buffalo{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 } 
 .Road{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 .HannahMitchelBeachRun{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 .waterfall{
   width: 348px;
   height: 512px;
+  padding: 40px;
+}
+.HannahMitchelcaught{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
+.ring{
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 header {
@@ -135,20 +145,343 @@ header nav {
     margin-left: 15px;
 
   text-decoration: none;
-
+}
 .gallery{
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
 }
+.Maddi{
+  width: 348px;
+  height: 512px;
+}
+
+section.introduction {
+  text-align: center;
+  color: black;
+  font-family: cursive;
+  font-size: large;
+  padding: 20px;
+  border: 10px solid black;
+}
+section.introduction img {
+  display: block;
+  margin: 0 auto 20px; /* Center the image and add bottom margin */
+  border: 10px solid black;
+}
+section.introduction p {
+  max-width: 600px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  border: 10px solid black;
+  text-align:center;
+  font-size: larger;
+}
+section.mainpic{
+  display: block;
+}
+.MaddiAbout1{
+  width: 498px;
+  height: 760px;
+  padding: 10px;
+  align-self: center;
+  
+}
+.MaddiAbout2{
+  width: 240px;
+  height: 360px;
+  padding: 10px;
+}
+.MaddiAbout3{
+  width: 240px;
+  height: 360px;
+  padding: 10px;
+}
 
 
 
+/* about-gallery layout */
+.about-gallery {
+  display: flex;
+  justify-content: center;   /* center the whole three-column group on the page */
+  align-items: flex-start;   /* align image tops; use center if you prefer vertical center */
+  gap: 30px;                 /* horizontal spacing between columns */
+  max-width: 1200px;         /* controls how wide the whole block can be */
+  margin: 30px auto;         /* center the block on the page */
+  box-sizing: border-box;
+  padding: 0 10px;
+}
 
+/* side columns stack their images vertically and center them horizontally */
+.about-gallery .side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+/* center column */
+.about-gallery .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/* Make images responsive and remove internal padding that breaks centering */
+.MaddiAbout1,
+.MaddiAbout2,
+.MaddiAbout3{
+  display: block;
+  padding: 0;            /* override existing padding so centering works */
+  margin: 0;
+  height: auto;          /* preserve aspect ratio */
+  box-sizing: border-box;
+}
 
+/* specific sizes — adjust to taste */
+.MaddiAbout1 {
+  width: 498px;          /* your desired center image width */
+  max-width: 45vw;       /* responsive cap: won't exceed 45% of viewport */
+}
 
+.MaddiAbout2,
+.MaddiAbout3 {
+  width: 348px;          /* side image widths */
+  max-width: 22vw;       /* responsive cap */
+}
 
+/* Responsive: on narrow screens stack everything vertically */
+@media (max-width: 900px)
+  .about-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }
 
+  .about-gallery .side {
+    flex-direction: row;     /* optionally show side images side-by-side on small screens */
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .MaddiAbout1,
+  .MaddiAbout2,
+  .MaddiAbout3 {
+    width: 100%;
+    max-width: 380px;
+
+}
+/* about gallery layout (add if you don't already have it) */
+.about-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 12px;
+}
+
+/* stack items inside each side column */
+.about-gallery .side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.gallery h2 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+/* layout for one image + centered caption */
+.gradphotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers caption under the image */
+  gap: 8px;
+  margin: 0 8px; /* horizontal spacing between items */
+}
+
+.gradphotos .caption {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: black;         /* change to your desired color */
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+/* layout for one image + centered caption */
+.engagementphotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers caption under the image */
+  gap: 8px;
+  margin: 0 8px; /* horizontal spacing between items */
+}
+.engagementphotos .caption {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: black;         /* change to your desired color */
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+/* about-gallery layout */
+.engagementgallery {
+  display: flex;
+  justify-content: center;   /* center the whole three-column group on the page */
+  align-items: flex-start;   /* align image tops; use center if you prefer vertical center */
+  gap: 30px;                 /* horizontal spacing between columns */
+  max-width: 1200px;         /* controls how wide the whole block can be */
+  margin: 30px auto;         /* center the block on the page */
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* side columns stack their images vertically and center them horizontally */
+.engagementgallery .side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* center column */
+.engagementgallery .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make images responsive and remove internal padding that breaks centering */
+.HannahMitchel,
+.HannahMitchelBeach,
+.HannahMitchelBeachRun,
+. {
+  display: block;
+  padding: 0;            /* override existing padding so centering works */
+  margin: 0;
+  height: auto;          /* preserve aspect ratio */
+  box-sizing: border-box;
+}
+
+/* specific sizes — adjust to taste */
+.HannahMitchel {
+  width: 498px;          /* your desired center image width */
+  max-width: 45vw;       /* responsive cap: won't exceed 45% of viewport */
+}
+
+.HannahMitchelBeach,
+.HannahMitchelBeachRun,
+. {
+  width: 348px;          /* side image widths */
+  max-width: 22vw;       /* responsive cap */
+}
+
+/* Responsive: on narrow screens stack everything vertically */
+@media (max-width: 900px) {
+  .gradgallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .gradgallery .side {
+    flex-direction: row;     /* optionally show side images side-by-side on small screens */
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .champagne6,
+  .hats,
+  .gradfour,
+  .whitefour {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+/* about-gallery layout */
+.gradgallery {
+  display: flex;
+  justify-content: center;   /* center the whole three-column group on the page */
+  align-items: flex-start;   /* align image tops; use center if you prefer vertical center */
+  gap: 30px;                 /* horizontal spacing between columns */
+  max-width: 1200px;         /* controls how wide the whole block can be */
+  margin: 30px auto;         /* center the block on the page */
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* side columns stack their images vertically and center them horizontally */
+.gradgallery .side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* center column */
+.gradgallery .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make images responsive and remove internal padding that breaks centering */
+.champagne6,
+.hats,
+.gradfour,
+.whitefour {
+  display: block;
+  padding: 0;            /* override existing padding so centering works */
+  margin: 0;
+  height: auto;          /* preserve aspect ratio */
+  box-sizing: border-box;
+}
+
+/* specific sizes — adjust to taste */
+.MaddiAbout1 {
+  width: 498px;          /* your desired center image width */
+  max-width: 45vw;       /* responsive cap: won't exceed 45% of viewport */
+}
+.champagne6,
+.hats,
+.gradfour,
+.whitefour {
+  width: 348px;          /* side image widths */
+  max-width: 22vw;       /* responsive cap */
+}
+
+/* Responsive: on narrow screens stack everything vertically */
+@media (max-width: 900px) {
+  .about-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .gradgallery .side {
+    flex-direction: row;     /* optionally show side images side-by-side on small screens */
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.champagne6,
+  .hats,
+  .gradfour,
+  .whitefour {
+    width: 100%;
+    max-width: 380px;
+  }
+}
