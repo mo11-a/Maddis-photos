@@ -1,15 +1,17 @@
 body{
+  background-color: black;
 }
 header{
     font-family:cursive;
     font-size: x-large;
     color: black;
     background-color:whitesmoke;
+    padding:40px;
     
     }
 
 #home-page{
-  background-image: url('img/_1010708.jpeg');
+  background-image: url(img/_1012342.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -23,13 +25,95 @@ a:active {
   /* Optional: You can also remove the default underline */
   text-decoration: none; 
 }
-
 .topnav a {
   float: right;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 22px;}
   
-  
+.champagne4{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+
+
+.gradsix{
+  width: 348px;
+  height:512px;
+  padding: 40px;
+}
+
+.whitefour{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+
+.Hannah{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+.Elizabeth{
+  width: 586px;
+  height: 910px;
+  padding: 40px;
+;
+}
+.Emma{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+  .champagne6{
+    width: 348px;
+    height: 512px;
+    padding: 40px;
+  }
+  .HannahMitchel{
+    width: 586px;
+    height: 910px;
+    padding: 40px;
+}
+.HannahMitchelBeach{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+.gradfour{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+} 
+.hats{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+} 
+.horse{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+.Buffalo{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+} 
+.Road{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+.HannahMitchelBeachRun{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
+}
+.waterfall{
+  width: 348px;
+  height: 512px;
+  padding: 40px;
 }
 header {
   position: relative;
@@ -51,7 +135,14 @@ header nav {
     margin-left: 15px;
 
   text-decoration: none;
+
+.gallery{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
+
 
 
 
