@@ -35,7 +35,16 @@ a:active {
   height: 350px;
   padding: 40px;
 }
-
+.throw{
+  width: 500px;
+  height: 800px;
+  padding: 20px;
+}
+.girl{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
 
 .gradsix{
   width: 500px;
@@ -50,13 +59,13 @@ a:active {
 }
 
 .Hannah{
-  width: 348px;
-  height: 512px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 }
 .Elizabeth{
-  width: 586px;
-  height: 910px;
+  width: 300px;
+  height: 350px;
   padding: 40px;
 ;
 }
@@ -253,14 +262,6 @@ section.mainpic{
   max-width: 22vw;       /* responsive cap */
 }
 
-/* Responsive: on narrow screens stack everything vertically */
-@media (max-width: 900px)
-  .about-gallery {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 100%;
-  }
 
   .about-gallery .side {
     flex-direction: row;     /* optionally show side images side-by-side on small screens */
@@ -331,7 +332,7 @@ section.mainpic{
   text-decoration: none;
   color: black;         /* change to your desired color */
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 2.05rem;
 }
 /* about-gallery layout */
 .engagementgallery {
@@ -404,7 +405,11 @@ section.mainpic{
   .champagne6,
   .hats,
   .gradfour,
-  .whitefour {
+  .whitefour,
+  .Elizabeth,
+  .girl,
+  .Hannah,
+  .champagne4 {
     width: 100%;
     max-width: 380px;
   }
@@ -441,7 +446,11 @@ section.mainpic{
 .champagne6,
 .hats,
 .gradfour,
-.whitefour {
+.whitefour,
+.Elizabeth,
+.girl,
+.Hannah,
+.champagne4 {
   display: block;
   padding: 0;            /* override existing padding so centering works */
   margin: 0;
@@ -457,7 +466,11 @@ section.mainpic{
 .champagne6,
 .hats,
 .gradfour,
-.whitefour {
+.whitefour,
+.Elizabeth,
+.girl,
+.Hannah,
+.champagne4 {
   width: 348px;          /* side image widths */
   max-width: 22vw;       /* responsive cap */
 }
@@ -480,8 +493,18 @@ section.mainpic{
 .champagne6,
   .hats,
   .gradfour,
-  .whitefour {
+  .whitefour,
+  .Elizabeth,
+  .girl,
+  .Hannah,
+  .champagne4 {
     width: 100%;
     max-width: 380px;
   }
+}
+h5{
+  color: white;
+  font-size: x-large;
+  max-width: 600px;
+  text-align: center;
 }
