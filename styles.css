@@ -418,7 +418,8 @@ section.mainpic{
 }
 
 /* Make images responsive and remove internal padding that breaks centering */
-.HannahMitchel,
+.ring
+.HannahMitchelcaught
 .HannahMitchelBeach,
 .HannahMitchelBeachRun{
   display: block;
@@ -433,7 +434,8 @@ section.mainpic{
   width: 498px;          /* your desired center image width */
   max-width: 45vw;       /* responsive cap: won't exceed 45% of viewport */
 }
-
+.ring
+.HannahMitchelcaught
 .HannahMitchelBeach,
 .HannahMitchelBeachRun{
   width: 348px;          /* side image widths */
