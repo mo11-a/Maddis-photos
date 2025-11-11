@@ -18,9 +18,16 @@
        </nav>
 
     </header>
-    <h1>Services</h1>
-     <div class="center-container">
-  <input type="date" value="2025-10-03">
-</div>
+    <div class="services">
+    <h5>Services</h5>
+    <p>Engagement Photos</p>
+    <p>Graduation Photos</p>
+    <p>Portrait Photos</p>
+<form id="date-request" action="/send_email.php" method="POST">
+  <label for="date">Choose a date</label>
+  <input id="date" name="date" type="date" required>
+  <input id="visitor-email" name="visitor_email" type="email" placeholder="Your email (optional)">
+  <button type="submit">Request Date</button>
+</form>
 </body>
 </html>

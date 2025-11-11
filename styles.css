@@ -734,3 +734,24 @@ max-width: 22vw;
   flex-wrap: wrap;
   justify-content: center;
 }
+.services{
+  color: white;
+  font-size: xx-large;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto; /* center the block horizontally */
+  text-align: center;
+}
+.services h5{
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+.services p{
+  font-size: large;
+}
+.center-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
