@@ -11,7 +11,7 @@ header{
     }
 
 #home-page{
-  background-image: url(img/_1012501.jpeg);
+  background-image:url(img/nature/_1012501.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -70,9 +70,9 @@ a:active {
 ;
 }
 .Emma{
-  width: 348px;
-  height: 512px;
-  padding: 40px;
+  width: 500px;
+  height: 800px;
+  padding: 20px;
 }
   .champagne6{
     width: 300px;
@@ -99,6 +99,31 @@ a:active {
   height: 350px;
   padding: 40px;
 } 
+.Millie{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
+.holdingchampagne{
+  width: 500px;
+  height: 800px;
+  padding: 20px;
+}
+.sitting{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
+.silly{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
+.single{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
 .horse{
   width: 300px;
   height: 350px;
@@ -120,9 +145,9 @@ a:active {
   padding: 40px;
 }
 .waterfall{
-  width: 348px;
-  height: 512px;
-  padding: 40px;
+  width: 500px;
+  height: 800px;
+  padding: 20px;
 }
 .HannahMitchelcaught{
   width: 300px;
@@ -334,6 +359,36 @@ section.mainpic{
   font-weight: 600;
   font-size: 2.05rem;
 }
+.nature{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 8px;
+}
+.nature .caption{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 2.05rem;
+}
+.portraitphotos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 8px;
+}
+.portraitphotos .caption{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 2.05rem;
+}
 /* about-gallery layout */
 .engagementgallery {
   display: flex;
@@ -365,8 +420,7 @@ section.mainpic{
 /* Make images responsive and remove internal padding that breaks centering */
 .HannahMitchel,
 .HannahMitchelBeach,
-.HannahMitchelBeachRun,
-. {
+.HannahMitchelBeachRun{
   display: block;
   padding: 0;            /* override existing padding so centering works */
   margin: 0;
@@ -381,8 +435,7 @@ section.mainpic{
 }
 
 .HannahMitchelBeach,
-.HannahMitchelBeachRun,
-. {
+.HannahMitchelBeachRun{
   width: 348px;          /* side image widths */
   max-width: 22vw;       /* responsive cap */
 }
@@ -409,7 +462,11 @@ section.mainpic{
   .Elizabeth,
   .girl,
   .Hannah,
-  .champagne4 {
+  .champagne4, 
+  .sitting,
+  .single,
+  .silly,
+  .Millie{
     width: 100%;
     max-width: 380px;
   }
@@ -450,7 +507,11 @@ section.mainpic{
 .Elizabeth,
 .girl,
 .Hannah,
-.champagne4 {
+.champagne4,
+.single ,
+.sitting,
+.silly,
+.Millie{
   display: block;
   padding: 0;            /* override existing padding so centering works */
   margin: 0;
@@ -470,7 +531,11 @@ section.mainpic{
 .Elizabeth,
 .girl,
 .Hannah,
-.champagne4 {
+.champagne4,
+.silly,
+.sitting,
+.single,
+.Millie{
   width: 348px;          /* side image widths */
   max-width: 22vw;       /* responsive cap */
 }
@@ -497,7 +562,11 @@ section.mainpic{
   .Elizabeth,
   .girl,
   .Hannah,
-  .champagne4 {
+  .champagne4,
+  .sitting,
+  .single,
+  .Millie,
+  .silly {
     width: 100%;
     max-width: 380px;
   }
@@ -507,4 +576,161 @@ h5{
   font-size: x-large;
   max-width: 600px;
   text-align: center;
+}
+@media (max-width: 900px) {
+.naturegallery{
+flex-direction: column; 
+align-items: center;
+gap: 20px;
+max-width: 100%
+}
+}
+.naturegallery .side{
+  flex-direction: row;
+gap: 12px;
+flex-wrap: wrap; 
+justify-content:center;
+}
+
+.horses,
+.mountains,
+.bison,
+.horses{
+width: 100%;
+ max-width: 380px;
+}
+/* about-gallery layout */
+.naturegallery{ 
+display: flex;
+justify-content: center; 
+align-items: flex-start;
+gap: 30px; 
+max-width: 1200px;
+margin: 30px auto; 
+box-sizing: border-box;
+padding: 0 10px;
+}
+
+.naturegallery .side{
+  display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+justify-content:flex-start
+}
+
+ /* center column */
+.naturegallery .center{ 
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.bison,
+.mountains,
+.road,
+.horses{
+display: block;
+padding: 0;
+margin: 0;
+height: auto;
+box-sizing: border-box;
+}
+
+.bison,
+.mountains,
+.road,
+.horses{
+width: 348px;
+max-width: 22vw;
+}
+
+.naturegallery .side { 
+flex-direction: row;
+gap: 12px;
+flex-wrap: wrap;
+justify-content: center;
+}
+.bison,
+.mountains,
+.horses,
+.road{
+ width: 100%;
+  max-width: 380px;
+}
+
+@media (max-width: 900px) {
+  .portraitgallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }}
+  .portraitgallery .side{
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ElizabethBeach,
+  .Hawaii,
+  .Blonde{
+    width: 100%;
+    max-width: 380px;
+  }
+
+.portraitgallery{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.portraitgallery .side{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* center column */
+.portraitgallery .center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hawaii,
+.ElizabethBeach,
+.Blonde{
+display: block;
+padding: 0;
+margin: 0;
+height: auto;
+box-sizing: border-box;
+width: 100%;
+ max-width: 380px;
+}
+
+.Hawaii,
+.Blonde,
+.ElizabethBeach{
+width: 348px;
+max-width: 22vw;
+}
+@media (max-width: 900px) {
+  .portraitgallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }}
+
+.portraitgallery .side{
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
