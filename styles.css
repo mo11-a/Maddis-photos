@@ -743,15 +743,31 @@ max-width: 22vw;
   text-align: center;
 }
 .services h5{
-  font-size: xx-large;
+  font-family:cursive;
+  font-size: 50px;
   margin-bottom: 10px;
+  font-style: bold;
 }
 .services p{
-  font-size: large;
+  font-size: x-large;
 }
 .center-container{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+#date-request{
+  border: solid black 10px;
+  padding: 15px;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
+#appointments-page{
+  background-image:url(img/nature/P1012123.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment:scroll;
 }
