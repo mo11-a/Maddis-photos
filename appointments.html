@@ -23,11 +23,30 @@
     <p>Engagement Photos</p>
     <p>Graduation Photos</p>
     <p>Portrait Photos</p>
-<form id="date-request" action="/send_email.php" method="POST">
-  <label for="date">Choose a date</label>
-  <input id="date" name="date" type="date" required>
-  <input id="visitor-email" name="visitor_email" type="email" placeholder="Your email (optional)">
-  <button type="submit">Request Date</button>
+<form id="date-request" 
+ action="https://formspree.io/f/mrbrgrgn"
+ method="POST">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Your Full Name"><br>
+      <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email"><br>
+  <label for="phone">Phone Number:</label>
+       <input type="tel" id="phone" name="phone" placeholder="Your Phone Number"><br>
+ <label for="appointmentDate">Appointment Date:</label>
+    <input type="date" id="appointmentDate" name="appointmentDate"><br>
+  <label for="appointmentTime">Appointment Time:</label>
+    <input type="time" id="appointmentTime" name="appointmentTime"><br>
+   <label for="serviceType">Type of Service:</label>
+    <select id="serviceType" name="serviceType"
+      <option value="">Select Service</option><br>
+            <option value="chooseone">Choose One</option>
+ <option value="Engagement Photos">Engagement Photos</option>
+      <option value="Graduation Photos">Graduation Photos</option>
+      <option value="Portrait Photos">Portrait Photos</option>
+    </select><br>
+   <label for="notes">Additional Notes:</label><br>
+    <textarea id="notes" name="notes" placeholder="Any special instructions or requests"></textarea><br>
+<button type="submit">Request Date</button>
 </form>
 </body>
 </html>
