@@ -14,7 +14,6 @@
         <a href="index.html" >Home</a>
         <a href="photos.html">Photos</a>
         <a href="appointments.html">Appointments</a>
-        <a href="About.html">About</a>
        </nav>
 
     </header>
@@ -37,10 +36,9 @@
   <label for="appointmentTime">Appointment Time:</label>
     <input type="time" id="appointmentTime" name="appointmentTime"><br>
    <label for="serviceType">Type of Service:</label>
-    <select id="serviceType" name="serviceType"
-      <option value="">Select Service</option><br>
-            <option value="chooseone">Choose One</option>
- <option value="Engagement Photos">Engagement Photos</option>
+    <select id="serviceType" name="serviceType">
+      <option value="">Select Service</option>
+      <option value="Engagement Photos">Engagement Photos</option>
       <option value="Graduation Photos">Graduation Photos</option>
       <option value="Portrait Photos">Portrait Photos</option>
     </select><br>
@@ -48,5 +46,29 @@
     <textarea id="notes" name="notes" placeholder="Any special instructions or requests"></textarea><br>
 <button type="submit">Request Appointment</button>
 </form>
+    </div>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>&copy; <span id="year"></span> Maddi — Port Washington photographer &middot; <a href="appointments.html">Make An Appointment</a></p>
+          <p>&copy; <span id="year"></span> Contact me: Email: xxxxxxx@xxx.com</p>  
+      </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      (function(){
+        const footer = document.querySelector('.site-footer');
+        if (!footer) return;
+        function onScroll(){
+          const y = window.scrollY || window.pageYOffset;
+          if ((window.innerHeight + y) >= (document.body.offsetHeight - 200)) {
+            footer.classList.add('visible');
+          } else {
+            footer.classList.remove('visible');
+          }
+        }
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
 </body>
 </html>

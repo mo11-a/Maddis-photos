@@ -13,9 +13,32 @@
 <a href="index.html" >Home</a>
 <a href="photos.html">Photos</a>
 <a href="appointments.html">Appointments</a>
- <a href="About.html">About</a>
 
 </div>
+        <footer class="site-footer">
+            <div class="wrap">
+                <p>&copy; <span id="year"></span> Maddi — Port Washington photographer &middot; <a href="About.html">About</a> &middot; <a href="appointments.html">Book</a></p>
+            </div>
+        </footer>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <script>
+            (function(){
+                const footer = document.querySelector('.site-footer');
+                if (!footer) return;
+                function onScroll(){
+                    const y = window.scrollY || window.pageYOffset;
+                    if ((window.innerHeight + y) >= (document.body.offsetHeight - 200)) {
+                        footer.classList.add('visible');
+                    } else {
+                        footer.classList.remove('visible');
+                    }
+                }
+                onScroll();
+                window.addEventListener('scroll', onScroll, { passive: true });
+            })();
+        </script>
+</body>
+</html>
 </nav>
 </header>
 <div class="portraitgallery">

@@ -1,12 +1,15 @@
 body{
-  background-color: black;
+  background-color: white;
+  /* Reserve space so fixed footer doesn't cover content */
+  padding-bottom: 90px;
 }
 header{
     font-family:cursive;
     font-size: x-large;
-    color: black;
+    color: darkslategrey;
     background-color:whitesmoke;
     padding:40px;
+    border: solid darkslategrey 10px;
     
     }
 
@@ -16,19 +19,29 @@ header{
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment:scroll;
+  min-height: 300vh;
+  
+}
+
+header h1 {
+font-size: 70px;
+padding: 50px;
+}
+#home-page{
+  border: solid darkslategrey 10px;
 }
 a:link,
 a:visited,
 a:hover,
 a:active {
-  color: black; /* Sets the text color to black */
+  color: darkslategrey; /* Sets the text color to black */
   /* Optional: You can also remove the default underline */
   text-decoration: none; 
 }
 .topnav a {
   float: right;
   text-decoration: none;
-  font-size: 22px;}
+  font-size: 26px;}
   
 .champagne4{
   width: 300px;
@@ -193,25 +206,29 @@ header nav {
 
 section.introduction {
   text-align: center;
-  color: black;
+  color: darkslategrey;
   font-family: cursive;
   font-size: large;
   padding: 20px;
-  border: 10px solid black;
+}
+section.introduction h2 {
+  font-size: 56px;
+  margin-bottom: 10px;
 }
 section.introduction img {
   display: block;
   margin: 0 auto 20px; /* Center the image and add bottom margin */
-  border: 10px solid black;
+  border: 10px solid darkslategray;
 }
 section.introduction p {
-  max-width: 600px;
+  max-width: 800px;
   padding: 15px;
   margin: 0 auto;
   background-color: whitesmoke;
-  border: 10px solid black;
+  border: 10px solid darkslategray;
   text-align:center;
-  font-size: larger;
+  font-size: 30px;
+  
 }
 section.mainpic{
   display: block;
@@ -224,13 +241,13 @@ section.mainpic{
   
 }
 .MaddiAbout2{
-  width: 240px;
-  height: 360px;
+  width: 100px;
+  height: 240px;
   padding: 10px;
 }
 .MaddiAbout3{
-  width: 240px;
-  height: 360px;
+  width: 100px;
+  height: 240px;
   padding: 10px;
 }
 
@@ -323,7 +340,7 @@ section.mainpic{
 .gallery h2 {
   width: 100%;
   text-align: center;
-  color: white;
+  color: darkslategrey;
   font-family: cursive;
 }
 /* layout for one image + centered caption */
@@ -339,7 +356,7 @@ section.mainpic{
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  color: black;         /* change to your desired color */
+  color: darkslategrey;         /* change to your desired color */
   font-weight: 600;
   font-size: 1.05rem;
 }
@@ -355,7 +372,7 @@ section.mainpic{
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  color: black;         /* change to your desired color */
+  color: darkslategrey;         /* change to your desired color */
   font-weight: 600;
   font-size: 2.05rem;
 }
@@ -370,7 +387,7 @@ section.mainpic{
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: darkslategrey;
   font-weight: 600;
   font-size: 2.05rem;
 }
@@ -385,7 +402,7 @@ section.mainpic{
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: darkslategrey;
   font-weight: 600;
   font-size: 2.05rem;
 }
@@ -418,8 +435,8 @@ section.mainpic{
 }
 
 /* Make images responsive and remove internal padding that breaks centering */
-.ring
-.HannahMitchelcaught
+.ring,
+.HannahMitchelcaught,
 .HannahMitchelBeach,
 .HannahMitchelBeachRun{
   display: block;
@@ -574,11 +591,12 @@ section.mainpic{
   }
 }
 h5{
-  color: white;
+  color: darkslategrey;
   font-size: x-large;
   max-width: 600px;
   text-align: center;
 }
+
 @media (max-width: 900px) {
 .naturegallery{
 flex-direction: column; 
@@ -749,6 +767,7 @@ max-width: 22vw;
   font-size: 50px;
   margin-bottom: 10px;
   font-style: bold;
+  color: white;
 }
 .services p{
   font-size: x-large;
@@ -760,9 +779,9 @@ max-width: 22vw;
   margin-top: 20px;
 }
 #date-request{
-  border: solid black 10px;
+  border: solid darkslategrey;
   padding: 15px;
-  color: black;
+  color: darkslategrey;
   background-color: white;
   text-align: center;
 }
@@ -772,4 +791,94 @@ max-width: 22vw;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment:scroll;
+  min-height: 300vh;
 }
+/* Maddi three-column layout: small - large - small */
+.maddi-layout {
+  display: flex;
+  align-items: center;       /* vertically center images */
+  justify-content: center;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* side columns (small images) */
+.maddi-layout .side {
+  flex: 0 0 25%;             /* take ~25% of the row each */
+  display: flex;
+  justify-content: center;
+}
+
+/* center column (bigger image) */
+.maddi-layout .center {
+  flex: 0 0 45%;             /* center gets the largest share */
+  display: flex;
+  justify-content: center;
+}
+
+/* image sizing - keep aspect ratio */
+.MaddiAboutCenter {
+  width: 100%;
+  max-width: 520px;          /* max width for large image */
+  height: auto;
+  object-fit: cover;
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.MaddiAboutSide {
+  width: 100%;
+  max-width: 320px;          /* smaller side images */
+  height: auto;
+  object-fit: cover;
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+  .maddi-layout {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .maddi-layout .side,
+  .maddi-layout .center {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 90vw;
+  }
+  .MaddiAboutCenter { max-width: 90vw; }
+  .MaddiAboutSide { max-width: 70vw; }
+}
+
+/* Footer - fixed at bottom while preserving existing min-height settings */
+.site-footer{
+  background: rgba(0, 0, 0, 0.363);
+  color: white;
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 4px solid darkslategrey;
+  position: fixed; /* keep footer fixed at bottom */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  transform: translateY(100%); /* hidden by default (moved below viewport) */
+  transition: transform 300ms ease-in-out; /* slide-up animation */
+}
+.site-footer a{ color: #fff; text-decoration: underline; }
+
+.site-footer.visible {
+  transform: translateY(0); /* slide into view */
+}
+
+/* If you prefer the footer to sit after content on very tall pages, it will still be
+   placed at the bottom of the viewport by the fixed positioning, but content won't
+   be obscured because of the body padding-bottom above. */

@@ -15,28 +15,49 @@
     <a href="index.html" >Home</a>
     <a href="photos.html">Photos</a>
     <a href="appointments.html">Appointments</a>
-    <a href="About.html">About</a>
 </div>
 </nav>
 </header>
 
 <div class="gallery">
     <div class="engagementphotos">
-        <a href="engagement.html" class="caption"><h2>Engagement Photos</h2></a>
+        <a href="engagement.html" class="caption"><h2>engagement photos</h2></a>
       <img src="img/engagement/_1013223.JPG" class="HannahMitchel">
 
       <div class="gradphotos">
-            <a href="grad.html" class="caption"><h2>Graduation Photos</h2></a>
+            <a href="grad.html" class="caption"><h2>graduation photos</h2></a>
  <img src="img/grad/_1010655.jpeg" class="gradsix">
 
 <div class="nature">
-    <a href="nature.html" class="caption"> <h2>Nature Photos</h2></a>
+    <a href="nature.html" class="caption"> <h2>landscape and wildlife</h2></a>
 <img src="img/nature/P1012123.jpeg" class="waterfall">
 
 <div class="portraitphotos">
-    <a href="portrait.html" class="caption"> <h2>Portrait Photos</h2> </a>
+    <a href="portrait.html" class="caption"> <h2>portrait and fine art photography</h2> </a>
     <img src="img/portrait pics/P1016363.jpeg" class="Emma">
     </div>
 </div>
+        <footer class="site-footer">
+            <div class="wrap">
+                <p>&copy; <span id="year"></span> Maddi — Port Washington photographer &middot; <a href="About.html">About</a> &middot; <a href="appointments.html">Book</a></p>
+            </div>
+        </footer>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <script>
+            (function(){
+                const footer = document.querySelector('.site-footer');
+                if (!footer) return;
+                function onScroll(){
+                    const y = window.scrollY || window.pageYOffset;
+                    if ((window.innerHeight + y) >= (document.body.offsetHeight - 200)) {
+                        footer.classList.add('visible');
+                    } else {
+                        footer.classList.remove('visible');
+                    }
+                }
+                onScroll();
+                window.addEventListener('scroll', onScroll, { passive: true });
+            })();
+        </script>
 </body>
 </html>

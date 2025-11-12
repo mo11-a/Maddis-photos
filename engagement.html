@@ -1,34 +1,59 @@
-header
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-‹meta name="viewport" content="width=device-width, initial-scale=1.0"> ‹title>photos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement Photos</title>
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <header>
-<h1>Previous Work</h1>
-
-<div>
-<nav>
-<a href="index.html" >Home</a>
-<a href="photos.html">Photos</a>
-<a href="appointments.html">Appointments</a>
- <a href="About.html">About</a>
-</nav>
-</div>
+  <h1>Previous Work</h1>
+  <nav>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="photos.html">Photos</a>
+      <a href="appointments.html">Appointments</a>
+    </div>
+  </nav>
 </header>
 <main>
-<div class="engagementgallery">
+  <div class="engagementgallery">
     <div class="side left">
-    <img src="img/engagement/_1013620.jpeg" class="HannahMitchelBeachRun">
- <img src="img/engagement/_1013423.jpeg"class="HannahMitchelBeach">
- </div>
+      <img src="img/engagement/_1013620.jpeg" class="HannahMitchelBeachRun">
+      <img src="img/engagement/_1013423.jpeg" class="HannahMitchelBeach">
+    </div>
     <div class="center">
-     <img src="img/engagement/_1013223.JPG" class="HannahMitchel">
-</div>
+      <img src="img/engagement/_1013223.JPG" class="HannahMitchel">
+    </div>
     <div class="side right">
-          <img src="img/engagement/_1013637.jpeg" class="HannahMitchelcaught">
-    <img src="img/engagement/_1013753.jpeg" class="ring">
+      <img src="img/engagement/_1013637.jpeg" class="HannahMitchelcaught">
+      <img src="img/engagement/_1013753.jpeg" class="ring">
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> Maddi — Port Washington photographer &middot; <a href="About.html">About</a> &middot; <a href="appointments.html">Book</a></p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  (function(){
+    const footer = document.querySelector('.site-footer');
+    if (!footer) return;
+    function onScroll(){
+      const y = window.scrollY || window.pageYOffset;
+      if ((window.innerHeight + y) >= (document.body.offsetHeight - 200)) {
+        footer.classList.add('visible');
+      } else {
+        footer.classList.remove('visible');
+      }
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+</body>
+</html>
+</html>

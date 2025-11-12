@@ -1,9 +1,8 @@
-header
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-‹meta name="viewport" content="width=device-width, initial-scale=1.0"> ‹title>photos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>photos</title>
 <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -16,7 +15,6 @@ header
 <a href="index.html" >Home</a>
 <a href="photos.html">Photos</a>
 <a href="appointments.html">Appointments</a>
- <a href="About.html">About</a>
 </nav>
 </div>
 </header>
@@ -61,3 +59,28 @@ header
 <img src="img/grad/_1010948.jpeg" class="sitting">
 </div>
     </div>
+    </div>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>&copy; <span id="year"></span> Maddi — Port Washington photographer &middot; <a href="About.html">About</a> &middot; <a href="appointments.html">Book</a></p>
+      </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      (function(){
+        const footer = document.querySelector('.site-footer');
+        if (!footer) return;
+        function onScroll(){
+          const y = window.scrollY || window.pageYOffset;
+          if ((window.innerHeight + y) >= (document.body.offsetHeight - 200)) {
+            footer.classList.add('visible');
+          } else {
+            footer.classList.remove('visible');
+          }
+        }
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>
+</body>
+</html>
