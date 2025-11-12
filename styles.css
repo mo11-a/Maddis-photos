@@ -546,6 +546,20 @@ section.mainpic{
   justify-content: flex-start;
 }
 
+/* Graduation album: on small screens force uniform side-image sizes (allow cropping) */
+@media (max-width: 600px) {
+  .gradgallery .side img {
+    width: 90vw !important;       /* use most of viewport width on phones */
+    max-width: 95vw !important;
+    height: 220px !important;     /* visible cropped height */
+    object-fit: cover !important; /* crop to fill the box */
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
 /* center column */
 .gradgallery .center {
   display: flex;
@@ -926,6 +940,284 @@ max-width: 22vw;
   transform: translateY(0); /* slide into view */
 }
 
-/* If you prefer the footer to sit after content on very tall pages, it will still be
-   placed at the bottom of the viewport by the fixed positioning, but content won't
-   be obscured because of the body padding-bottom above. */
+/* Restore three-column gallery layout for album pages
+   Goal: left column with two stacked images, center column with one large image, right column with two stacked images.
+   This targets the main gallery types used across the site without affecting other single-image components. */
+.naturegallery, .portraitgallery, .gradgallery, .engagementgallery, .about-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* allow columns to match height so center can vertically center */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.naturegallery .side, .portraitgallery .side, .gradgallery .side, .engagementgallery .side, .about-gallery .side {
+  flex: 0 0 25%; /* side columns take ~25% each */
+  display: flex;
+  flex-direction: column; /* stack two images vertically */
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between; /* push one image to top and one to bottom */
+}
+
+.naturegallery .center, .portraitgallery .center, .gradgallery .center, .engagementgallery .center, .about-gallery .center {
+  flex: 0 0 50%; /* center column takes the remaining space */
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+}
+
+/* Side images: two stacked smaller images */
+.naturegallery .side img,
+.portraitgallery .side img,
+.gradgallery .side img,
+.engagementgallery .side img,
+.about-gallery .side img {
+  width: 100%;
+  max-width: 360px; /* cap for side images */
+  height: auto;
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center image: large, kept proportional */
+.naturegallery .center img,
+.portraitgallery .center img,
+.gradgallery .center img,
+.engagementgallery .center img,
+.about-gallery .center img {
+  width: auto; /* allow intrinsic width up to max-width, prevents full-stretch */
+  max-width: 520px; /* large center image on wide screens */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center horizontally within the center column */
+  padding: 0;
+  box-sizing: border-box;
+  object-fit: cover; /* preserve previous visual behavior */
+}
+
+/* Responsive: stack galleries vertically on small screens */
+@media (max-width: 900px) {
+  .naturegallery, .portraitgallery, .gradgallery, .engagementgallery, .about-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;}
+  }
+  .naturegallery .side, .portraitgallery .side, .gradgallery .side, .engagementgallery .side, .about-gallery .side,
+  .naturegallery .center, .portraitgallery .center, .gradgallery .center, .engagementgallery .center, .about-gallery .center {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 90vw;
+  }
+  .naturegallery .center img,
+  .portraitgallery .center img,
+  .gradgallery .center img,
+  .engagementgallery .center img,
+  .about-gallery .center img {
+    max-width: 90vw;
+  }
+
+
+/* Responsive improvements: make images fluid and remove large fixed paddings that break layouts
+   on small screens. Target common gallery containers so existing classes remain usable. */
+
+/* Make all images scale to their containers by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove extra padding that many image classes set (overrides original sizing for galleries) */
+.portraitgallery img,
+.about-gallery img,
+.gradgallery img,
+.engagementgallery img,
+.naturegallery img,
+.maddi-layout img,
+.gallery img {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Portrait gallery specific proportions: center larger than sides */
+.portraitgallery .side img {
+  width: 100%;
+  max-width: 320px; /* side images limit */
+}
+.portraitgallery .center img {
+  width: 100%;
+  max-width: 520px; /* center image limit */
+}
+
+/* Maddi layout proportions (use percentages so it adapts to container width) */
+.maddi-layout .side { flex: 0 0 25%; }
+.maddi-layout .center { flex: 0 0 50%; }
+
+/* Make nav responsive instead of floating links (avoid float conflicts) */
+.topnav { display: flex; gap: 12px; align-items: center; justify-content: flex-end; flex-wrap: wrap; }
+.topnav a { float: none; }
+
+/* Global responsive breakpoints */
+@media (max-width: 1200px) {
+  .maddi-layout { max-width: 95%; }
+  .portraitgallery .side img { max-width: 300px; }
+  .portraitgallery .center img { max-width: 460px; }
+}
+
+@media (max-width: 900px) {
+  /* Stack galleries vertically on small screens (already mostly present, keep consistent) */
+  .maddi-layout, .portraitgallery, .about-gallery, .gradgallery, .engagementgallery, .naturegallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .maddi-layout .side,
+  .maddi-layout .center,
+  .portraitgallery .side,
+  .portraitgallery .center {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 90vw;
+  }
+  .topnav { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 2rem; padding: 18px; }
+  section.introduction p { font-size: 1.05rem; }
+  .portraitgallery .side img, .portraitgallery .center img { max-width: 95vw; }
+}
+
+/* Small-screen tweaks for grad gallery: ensure side images are consistent sizes (stacked)
+   On very small screens it's better to stack the two side images vertically and keep
+   them the same width so they look uniform. */
+@media (max-width: 480px) {
+  .gradgallery .side {
+    flex-direction: column; /* stack the two side images vertically */
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .gradgallery .side img {
+    width: 300px !important;
+    max-width: 95vw !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: none !important; /* show full image, no cropping */
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  /* Ensure center image also fits nicely */
+  .gradgallery .center img {
+    max-width: 90vw !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+}
+
+/* Force equal visible heights for grad side images on very small screens (crop to fit) */
+@media (max-width: 480px) {
+  .gradgallery .side img {
+    /* switch to consistent widths instead of forced heights */
+    height: auto !important;
+    object-fit: none !important; /* show full image, no cropping */
+  }
+}
+
+/* Make engagement album side images match the visual size of .sitting on smaller screens */
+@media (max-width: 480px) {
+  .engagementgallery .side img {
+    width: 300px !important;      /* consistent width */
+    max-width: 95vw !important;   /* but never exceed viewport */
+    height: auto !important;      /* preserve aspect ratio */
+    object-fit: none !important;  /* don't crop; show full image */
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Override fixed 500x800 image classes to be responsive */
+.throw,
+.gradsix,
+.Emma,
+.HannahMitchel,
+.holdingchampagne,
+.waterfall,
+.Bri,
+.blackandwhite,
+.trees {
+  width: 100% !important;
+  max-width: 520px !important; /* keep larger center image look on wide screens */
+  height: auto !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Nature gallery: allow center image to be a bit larger and preserve aspect without distortion */
+.naturegallery .center img {
+  width: 100%;
+  max-width: 640px; /* slightly larger center image for nature gallery */
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Smaller cap for side images that previously used 300/350px sizes */
+.champagne4,
+.champagne6,
+.girl,
+.whitefour,
+.Hannah,
+.Elizabeth,
+.HannahMitchelBeach,
+.gradfour,
+.hats,
+.Millie,
+.sitting,
+.silly,
+.single,
+.horse,
+.Buffalo,
+.Road,
+.HannahMitchelBeachRun,
+.HannahMitchelcaught,
+.ring,
+.Brianna,
+.solo,
+.phone,
+.glass {
+  width: 100% !important;
+  max-width: 360px !important;
+  height: auto !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .throw,
+  .gradsix,
+  .Emma,
+  .HannahMitchel,
+  .holdingchampagne,
+  .waterfall,
+  .Bri,
+  .blackandwhite,
+  .trees {
+    max-width: 90vw !important;
+  }
+  .champagne4,
+  .champagne6,
+  .girl,
+  .whitefour {
+    max-width: 90vw !important;
+    height: auto !important;
+
+  }
+}
