@@ -1,56 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>photos</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portraits</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
-<h1>Previous Work</h1>
-<nav>
-<div>
-<a href="index.html" >Home</a>
-<a href="photos.html">Photos</a>
-<a href="appointments.html">Appointments</a>
-
-</div>
-        <footer class="site-footer">
-            <div class="wrap">
-                <p>&copy; <span id="year"></span> Maddi — Port Washington photographer &middot; <a href="About.html">About</a> &middot; <a href="appointments.html">Book</a></p>
+    <h1>Previous Work</h1>
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="photos.html">Photos</a>
+            <a href="appointments.html">Appointments</a>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="portrait-section">
+        <div class="portraitgallery">
+            <div class="side left">
+                <img src="img/portrait pics/IMG_4064.jpeg" class="Brianna" alt="Brianna">
+                <img src="img/portrait pics/IMG_4061.jpeg" class="glass" alt="Glass">
             </div>
-        </footer>
-        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-        <script>
-            (function(){
-                const footer = document.querySelector('.site-footer');
-                if (!footer) return;
-                function onScroll(){
-                    const y = window.scrollY || window.pageYOffset;
-                    if ((window.innerHeight + y) >= (document.body.offsetHeight - 200)) {
-                        footer.classList.add('visible');
-                    } else {
-                        footer.classList.remove('visible');
-                    }
-                }
-                onScroll();
-                window.addEventListener('scroll', onScroll, { passive: true });
-            })();
-        </script>
+            <div class="center">
+                <img src="img/portrait pics/IMG_4062.jpeg" class="Bri" alt="Bri">
+            </div>
+            <div class="side right">
+                <img src="img/portrait pics/IMG_4063.jpeg" class="phone" alt="Phone">
+                <img src="img/portrait pics/IMG_4065.jpeg" class="solo" alt="Solo">
+            </div>
+        </div>
+
+        <div class="portraitgallery">
+            <div class="side left">
+                <img src="img/portrait pics/IMG_4017.jpeg" class="Blonde" alt="Blonde">
+                <img src="img/portrait pics/IMG_4020.jpeg" class="Blonde" alt="Blonde">
+            </div>
+            <div class="center">
+                <img src="img/portrait pics/IMG_4019.jpeg" class="blackandwhite" alt="Emma">
+            </div>
+            <div class="side right">
+                <img src="img/portrait pics/IMG_4024.jpeg" class="Blonde" alt="Blonde">
+                 <img src="img/portrait pics/IMG_4029.jpeg" class="Blonde" alt="Blonde">
+
+            </div>
+        </div>
+                <div class="portraitgallery">
+            <div class="side left">
+                <img src="img/portrait pics/P1016333.jpeg" class="Hawaii" alt="Hawaii">
+                <img src="img/portrait pics/P1016682.jpeg" class="Blonde" alt="Blonde">
+            </div>
+            <div class="center">
+                <img src="img/portrait pics/P1016363.jpeg" class="Emma" alt="Emma">
+            </div>
+            <div class="side right">
+                <img src="img/portrait pics/IMG_0140.jpeg" class="ElizabethBeach" alt="Elizabeth Beach 2">
+                <img src="img/portrait pics/P1012226.jpeg" class="ElizabethBeach" alt="Elizabeth Beach 2">
+
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <p>&copy; <span id="year"></span> Maddi — Port Washington photographer&middot; <a href="appointments.html">Book An Appointment</a></p>
+      <p>&copy; <span id="year"></span> Contact me: Email: xxxxxxx@xxx.com</p>  
+
+    </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+    (function(){
+        const footer = document.querySelector('.site-footer');
+        if (!footer) return;
+        function onScroll(){
+            const y = window.scrollY || window.pageYOffset;
+            if ((window.innerHeight + y) >= (document.body.offsetHeight - 200)) {
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        }
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+</script>
 </body>
 </html>
-</nav>
-</header>
-<div class="portraitgallery">
-    <div class="side left">
-<img src="img/portrait pics/P1016333.jpeg" class="Hawaii">
-<img src="img/portrait pics/P1016682.jpeg" class="Blonde">
-    </div>
-    <div class="center">
-        <img src="img/portrait pics/P1016363.jpeg" class="Emma">
-    </div>
-    <div class="side right">
-<img src="img/portrait pics/P1012228.jpeg" class="ElizabethBeach">
-<img src="img/portrait pics/P1012226.jpeg" class="ElizabethBeach">
-    </div>
-</div>

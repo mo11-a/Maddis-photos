@@ -172,6 +172,41 @@ a:active {
   height: 350px;
   padding: 40px;
 }
+.Brianna{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+} 
+.solo{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
+.phone{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
+.glass{
+  width: 300px;
+  height: 350px;
+  padding: 40px;
+}
+.Bri{
+  width: 500px;
+  height: 800px;
+  padding: 20px;
+}
+.blackandwhite{
+  width: 500px;
+  height: 800px;
+  padding: 20px;
+}
+.trees{
+  width:500px;
+  height:800px;
+  padding:20px;
+}
 header {
   position: relative;
   text-align: center;   /* centers the h1 horizontally */
@@ -693,7 +728,11 @@ justify-content: center;
   }
   .ElizabethBeach,
   .Hawaii,
-  .Blonde{
+  .Blonde,
+  .phone,
+  .glass,
+  .Brianna,
+  .solo{
     width: 100%;
     max-width: 380px;
   }
@@ -724,7 +763,11 @@ justify-content: center;
 
 .Hawaii,
 .ElizabethBeach,
-.Blonde{
+.Blonde,
+.phone,
+.glass,
+.Brianna,
+.solo{
 display: block;
 padding: 0;
 margin: 0;
@@ -736,7 +779,11 @@ width: 100%;
 
 .Hawaii,
 .Blonde,
-.ElizabethBeach{
+.ElizabethBeach,
+.phone,
+.glass,
+.Brianna,
+.solo{
 width: 348px;
 max-width: 22vw;
 }
