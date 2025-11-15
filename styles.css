@@ -1,15 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   background-color: white;
   /* Reserve space so fixed footer doesn't cover content */
   padding-bottom: 90px;
+  font-size: 16px; /* base font size for rem calculations */
+}
+
+/* Container for max-width on very large screens */
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 header{
     font-family:cursive;
-    font-size: x-large;
+    font-size: clamp(1.25rem, 2vw, 1.75rem); /* responsive font size */
     color: darkslategrey;
     background-color:whitesmoke;
-    padding:40px;
-    border: solid darkslategrey 10px;
+    padding: clamp(20px, 4vw, 40px); /* responsive padding */
+    border: solid darkslategrey clamp(5px, 1vw, 10px); /* responsive border */
     
     }
 
@@ -19,17 +32,33 @@ header{
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment:scroll;
-  min-height: 300vh;
+  min-height: 100vh; /* responsive height based on viewport */
   
 }
 
+#appointments-page{
+  background-image:url(img/nature/P1012123.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment:scroll;
+  min-height: 100vh; /* responsive height based on viewport */
+}
+
 header h1 {
-font-size: 70px;
-padding: 50px;
+font-size: clamp(2rem, 5vw, 4.375rem); /* 32px to 70px responsive */
+padding: clamp(20px, 4vw, 50px); /* responsive padding */
 }
 #home-page{
   border: solid darkslategrey 10px;
 }
+/* Make all images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 a:link,
 a:visited,
 a:hover,
@@ -41,7 +70,9 @@ a:active {
 .topnav a {
   float: right;
   text-decoration: none;
-  font-size: 26px;}
+  font-size: clamp(1rem, 2vw, 1.625rem); /* 16px to 26px responsive */
+  padding: 0.5rem;
+}
   
 .champagne4{
   width: 300px;
@@ -61,7 +92,7 @@ a:active {
 
 .gradsix{
   width: 500px;
-  height:800px;
+  height: 800px;
   padding: 20px;
 }
 
@@ -103,14 +134,14 @@ a:active {
   padding: 40px;
 }
 .gradfour{
-  width: 300px;
-  height: 350px;
-  padding: 40px;
+width: 300px;
+height: 350px;
+padding: 40px;
 } 
 .hats{
-  width: 300px;
-  height: 350px;
-  padding: 40px;
+width: 300px;
+height: 350px;
+padding: 40px;
 } 
 .Millie{
   width: 300px;
@@ -247,7 +278,7 @@ section.introduction {
   padding: 20px;
 }
 section.introduction h2 {
-  font-size: 56px;
+  font-size: clamp(2rem, 4vw, 3.5rem); /* 32px to 56px responsive */
   margin-bottom: 10px;
 }
 section.introduction img {
@@ -256,13 +287,16 @@ section.introduction img {
   border: 10px solid darkslategray;
 }
 section.introduction p {
+  max-width: 90%;
+  width: 100%;
   max-width: 800px;
-  padding: 15px;
+  padding: clamp(15px, 2vw, 30px);
   margin: 0 auto;
   background-color: whitesmoke;
-  border: 10px solid darkslategray;
+  border: clamp(5px, 1vw, 10px) solid darkslategray;
   text-align:center;
-  font-size: 30px;
+  font-size: clamp(1.125rem, 2vw, 1.875rem); /* 18px to 30px responsive */
+  line-height: 1.6;
   
 }
 section.mainpic{
@@ -385,6 +419,8 @@ section.mainpic{
   text-align: center;
   color: darkslategrey;
   font-family: cursive;
+  font-size: clamp(1.5rem, 3vw, 2.5rem); /* responsive heading */
+  padding: 1rem;
 }
 /* layout for one image + centered caption */
 .gradphotos {
@@ -401,7 +437,7 @@ section.mainpic{
   text-decoration: none;
   color: darkslategrey;         /* change to your desired color */
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem); /* responsive caption */
 }
 /* layout for one image + centered caption */
 .engagementphotos {
@@ -417,7 +453,7 @@ section.mainpic{
   text-decoration: none;
   color: darkslategrey;         /* change to your desired color */
   font-weight: 600;
-  font-size: 2.05rem;
+  font-size: clamp(1.25rem, 2vw, 2.05rem); /* responsive caption */
 }
 .nature{
   display: flex;
@@ -432,7 +468,7 @@ section.mainpic{
   text-decoration: none;
   color: darkslategrey;
   font-weight: 600;
-  font-size: 2.05rem;
+  font-size: clamp(1.25rem, 2vw, 2.05rem); /* responsive caption */
 }
 .portraitphotos{
   display: flex;
@@ -447,7 +483,7 @@ section.mainpic{
   text-decoration: none;
   color: darkslategrey;
   font-weight: 600;
-  font-size: 2.05rem;
+  font-size: clamp(1.25rem, 2vw, 2.05rem); /* responsive caption */
 }
 /* about-gallery layout */
 .engagementgallery {
@@ -494,8 +530,8 @@ section.mainpic{
   width: 498px;          /* your desired center image width */
   max-width: 45vw;       /* responsive cap: won't exceed 45% of viewport */
 }
-.ring
-.HannahMitchelcaught
+.ring,
+.HannahMitchelcaught,
 .HannahMitchelBeach,
 .HannahMitchelBeachRun{
   width: 348px;          /* side image widths */
@@ -555,7 +591,7 @@ section.mainpic{
 }
 
 /* Graduation album: on small screens force uniform side-image sizes (allow cropping) */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .gradgallery .side img {
     width: 90vw !important;       /* use most of viewport width on phones */
     max-width: 95vw !important;
@@ -600,7 +636,8 @@ section.mainpic{
   width: 498px;          /* your desired center image width */
   max-width: 45vw;       /* responsive cap: won't exceed 45% of viewport */
 }
-.champagne6,
+/* Graduation side images now handled by .gradgallery .side img rules to maintain vertical orientation */
+/*.champagne6,
 .hats,
 .gradfour,
 .whitefour,
@@ -612,9 +649,9 @@ section.mainpic{
 .sitting,
 .single,
 .Millie{
-  width: 348px;          /* side image widths */
-  max-width: 22vw;       /* responsive cap */
-}
+  width: 348px;
+  max-width: 22vw;
+}*/
 
 /* Responsive: on narrow screens stack everything vertically */
 @media (max-width: 900px) {
@@ -649,9 +686,12 @@ section.mainpic{
 }
 h5{
   color: darkslategrey;
-  font-size: x-large;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem); /* responsive h5 */
+  max-width: 90%;
+  width: 100%;
   max-width: 600px;
   text-align: center;
+  margin: 0 auto;
 }
 
 @media (max-width: 900px) {
@@ -825,21 +865,24 @@ max-width: 22vw;
 }
 .services{
   color: white;
-  font-size: xx-large;
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem); /* responsive text */
+  max-width: 90%;
+  width: 100%;
   max-width: 600px;
   display: block;
   margin: 0 auto; /* center the block horizontally */
   text-align: center;
+  padding: 1rem;
 }
 .services h5{
   font-family:cursive;
-  font-size: 50px;
+  font-size: clamp(2rem, 4vw, 3.125rem); /* 32px to 50px responsive */
   margin-bottom: 10px;
   font-style: bold;
   color: white;
 }
 .services p{
-  font-size: x-large;
+  font-size: clamp(1.125rem, 2vw, 1.5rem); /* responsive paragraph */
 }
 .center-container{
   display: flex;
@@ -981,8 +1024,8 @@ max-width: 22vw;
 /* Side images: two stacked smaller images */
 .naturegallery .side img,
 .portraitgallery .side img,
-.gradgallery .side img,
 .engagementgallery .side img,
+.gradgallery .side img,
 .about-gallery .side img {
   width: 100%;
   max-width: 360px; /* cap for side images */
@@ -1006,4 +1049,200 @@ max-width: 22vw;
   padding: 0;
   box-sizing: border-box;
   object-fit: cover; /* preserve previous visual behavior */
+}
+
+/* ===============================================
+   RESPONSIVE MEDIA QUERIES
+   =============================================== */
+
+/* Mobile: Stack galleries vertically on small screens */
+@media (max-width: 900px) {
+  .naturegallery, .portraitgallery, .gradgallery, .engagementgallery, .about-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .naturegallery .side, 
+  .portraitgallery .side, 
+  .gradgallery .side, 
+  .engagementgallery .side, 
+  .about-gallery .side {
+    flex: 0 0 auto;
+    width: 100%;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .naturegallery .center,
+  .portraitgallery .center,
+  .gradgallery .center,
+  .engagementgallery .center,
+  .about-gallery .center {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  
+  .naturegallery .side img,
+  .portraitgallery .side img,
+  .gradgallery .side img,
+  .engagementgallery .side img,
+  .about-gallery .side img {
+    width: 100%;
+    max-width: 380px;
+  }
+  
+  .naturegallery .center img,
+  .portraitgallery .center img,
+  .gradgallery .center img,
+  .engagementgallery .center img,
+  .about-gallery .center img {
+    width: 100%;
+    max-width: 90vw;
+  }
+}
+
+/* Extra Small Devices (Phones, < 576px) */
+@media (max-width: 575px) {
+  body {
+    padding-bottom: 70px;
+  }
+  
+  header h1 {
+    font-size: 1.75rem !important;
+    padding: 15px !important;
+  }
+  
+  .topnav a {
+    font-size: 0.9rem !important;
+    padding: 0.25rem !important;
+  }
+  
+  header nav {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .topnav a {
+    float: none;
+    display: inline-block;
+    margin: 0 8px;
+  }
+  
+  section.introduction p {
+    font-size: 1rem !important;
+    padding: 10px !important;
+  }
+  
+  .gallery {
+    gap: 10px;
+  }
+}
+
+/* Small Devices (Tablets, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .naturegallery, .portraitgallery, .gradgallery, .engagementgallery, .about-gallery {
+    gap: 20px;
+  }
+  .gradgallery .side img {
+    width: auto; /* allow natural width */
+    max-width: 360px; /* cap for side images */
+    height: auto; /* fixed height to maintain vertical orientation */
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: contain; /* show full image without cropping */
+  }
+}
+
+/* Medium Devices (Tablets/Small Laptops, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .naturegallery .side img,
+  .portraitgallery .side img,
+  .gradgallery .side img,
+  .engagementgallery .side img,
+  .about-gallery .side img {
+    max-width: 280px;
+  }
+  
+  .naturegallery .center img,
+  .portraitgallery .center img,
+  .gradgallery .center img,
+  .engagementgallery .center img,
+  .about-gallery .center img {
+    max-width: 420px;
+  }
+}
+
+/* Large Devices (Desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .naturegallery, .portraitgallery, .gradgallery, .engagementgallery, .about-gallery {
+    max-width: 1100px;
+  }
+}
+
+/* Extra Large Devices (Large Desktops, 1200px - 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .naturegallery, .portraitgallery, .gradgallery, .engagementgallery, .about-gallery {
+    max-width: 1300px;
+  }
+  
+  .naturegallery .center img,
+  .portraitgallery .center img,
+  .gradgallery .center img,
+  .engagementgallery .center img,
+  .about-gallery .center img {
+    max-width: 600px;
+  }
+  
+  .naturegallery .side img,
+  .portraitgallery .side img,
+  .gradgallery .side img,
+  .engagementgallery .side img,
+  .about-gallery .side img {
+    max-width: 400px;
+  }
+}
+
+/* Ultra Large Devices (4K Screens, >= 1600px) */
+@media (min-width: 1600px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .naturegallery, .portraitgallery, .gradgallery, .engagementgallery, .about-gallery {
+    max-width: 1600px;
+    gap: 40px;
+  }
+  
+  .naturegallery .center img,
+  .portraitgallery .center img,
+  .gradgallery .center img,
+  .engagementgallery .center img,
+  .about-gallery .center img {
+    max-width: 720px;
+  }
+  
+  .naturegallery .side img,
+  .portraitgallery .side img,
+  .gradgallery .side img,
+  .engagementgallery .side img,
+  .about-gallery .side img {
+    max-width: 480px;
+  }
+  
+  header h1 {
+    font-size: 5rem;
+  }
+  
+  section.introduction h2 {
+    font-size: 4rem;
+  }
 }
